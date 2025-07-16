@@ -17,6 +17,9 @@ dependencies = []
 Repository = "https://github.com/mccreemainwoody/hyprthemes.git"
 
 [dependency-groups]
+dev = [
+    "icecream>=2.1.5",
+]
 test = [
     "ruff>=0.12.3",
 ]
