@@ -1,0 +1,17 @@
+[project]
+name = "hyprthemes"
+version = "0.1.0"
+description = "A CLI utility tool to load Hyprland themes from YAML configurations"
+
+authors = [
+    { name = "Clément METZ", email = "metz.clement@gmail.com" }
+]
+readme = "README.md"
+licence = "MIT"
+licence-files = [ "LICENCE" ]
+
+requires-python = ">=3.13"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/mccreemainwoody/hyprthemes.git"
