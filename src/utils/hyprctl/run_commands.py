@@ -1,18 +1,17 @@
 import json
 import subprocess
 
-from collections.abc import Collection
-from typing import Any
+from models import CommandResult
 
-type HyprCtlResponse = dict[str, Any]
+from collections.abc import Collection
 
 
 def run_hyprctl_command(args: Collection[str,], use_json: bool = False) \
-        -> HyprCtlResponse:
+        -> CommandResult:
     """Run a hyprctl command and return its output.
 
     Return code will be -1 if hyprctl does not recognize the request (the
-    original CLI would return 0 regardless).
+    original CLI would return 0 instead).
 
     Args:
         args (Collection[str]): The command to run, accompanied by its
@@ -22,9 +21,9 @@ def run_hyprctl_command(args: Collection[str,], use_json: bool = False) \
         error.
 
     Returns:
-        HyprCtlResponse: The output of the command.
+        CommandResult: The output of the command.
     """
-    total_command = ["hyprctl", "zbeub", *args]
+    total_command = ["hyprctl", *args]
 
     if use_json:
         total_command.insert(0, "-j")
@@ -44,14 +43,10 @@ def run_hyprctl_command(args: Collection[str,], use_json: bool = False) \
 
     exit_code = -1 if stdout == "unknown request" else result.returncode
 
-    return {
-        "exit_code": exit_code,
-        "stdout": stdout,
-        "stderr": stderr
-    }
+    return CommandResult(exit_code=exit_code, stdout=stdout, stderr=stderr)
 
 
-def run_hyprctl_keyword(keyword: str, value: str) -> HyprCtlResponse:
+def run_hyprctl_keyword(keyword: str, value: str) -> CommandResult:
     """Assign a value to a keyword using the hyprctl API.
 
     Return its results afterward.
@@ -61,7 +56,7 @@ def run_hyprctl_keyword(keyword: str, value: str) -> HyprCtlResponse:
         value (str): The value to assign to the keyword.
 
     Returns:
-        HyprCtlResponse: The output of the command.
+        CommandResult: The output of the command.
     """
-    args = (keyword, value)
+    args = ("keyword", keyword, value)
     return run_hyprctl_command(args)
