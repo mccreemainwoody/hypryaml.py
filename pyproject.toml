@@ -21,5 +21,6 @@ dev = [
     "icecream>=2.1.5",
 ]
 test = [
+    "pytest>=8.4.1",
     "ruff>=0.12.3",
 ]
