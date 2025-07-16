@@ -1,7 +1,7 @@
-from pydantic.dataclasses import dataclass
+from dataclasses import dataclass
 
 
-@dataclass
+@dataclass(frozen=True)
 class CommandResult:
     """Represents the result of a command execution."""
     exit_code: int

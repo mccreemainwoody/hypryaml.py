@@ -1,9 +1,8 @@
 import yaml
 
-from pathlib import Path
-
 from hyprthemes.appliers.hyprland import apply_hyprland_configuration
 
+from pathlib import Path
 from typing import Any
 
 
