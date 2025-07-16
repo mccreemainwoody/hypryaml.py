@@ -1,4 +1,4 @@
-def main():
+def main():  # noqa: D103
     print("Hello from hyprthemes!")
 
 
