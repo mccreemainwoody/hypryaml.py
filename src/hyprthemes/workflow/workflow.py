@@ -2,7 +2,7 @@ import yaml
 
 from pathlib import Path
 
-from appliers.hyprland import apply_hyprland_configuration
+from hyprthemes.appliers.hyprland import apply_hyprland_configuration
 
 from typing import Any
 

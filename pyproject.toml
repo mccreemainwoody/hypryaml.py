@@ -20,6 +20,9 @@ dependencies = [
 [project.urls]
 Repository = "https://github.com/mccreemainwoody/hyprthemes.git"
 
+[project.scripts]
+hyprthemes = "hyprthemes.main:app"
+
 [dependency-groups]
 dev = [
     "icecream>=2.1.5",
@@ -28,3 +31,7 @@ test = [
     "pytest>=8.4.1",
     "ruff>=0.12.3",
 ]
+
+[build-system]
+requires = ["uv_build>=0.7.21,<0.8.0"]
+build-backend = "uv_build"

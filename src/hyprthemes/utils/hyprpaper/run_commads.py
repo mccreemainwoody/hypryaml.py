@@ -1,5 +1,5 @@
-from models import CommandResult
-from ..hyprctl import run_hyprctl_command
+from hyprthemes.models import CommandResult
+from hyprthemes.utils.hyprctl import run_hyprctl_command
 
 from collections.abc import Collection
 from os import PathLike

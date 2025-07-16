@@ -1,7 +1,7 @@
 import json
 import subprocess
 
-from models import CommandResult
+from hyprthemes.models import CommandResult
 
 from collections.abc import Collection
 

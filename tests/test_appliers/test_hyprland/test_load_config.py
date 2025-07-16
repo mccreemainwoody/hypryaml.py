@@ -1,12 +1,12 @@
 import pytest
 import yaml
 
-from appliers.hyprland.load_config import generate_keywords
+from hyprthemes.appliers.hyprland import generate_keywords
 
 from pathlib import Path
 from typing import Any
 
-from tests.config import TEST_CONFIGS_ROOT
+from config import TEST_CONFIGS_ROOT
 
 
 @pytest.mark.parametrize(
