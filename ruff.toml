@@ -1,0 +1,37 @@
+exclude = [
+    ".venv/*"
+]
+
+target-version = "py313"
+
+line-length = 80
+indent-width = 4
+
+
+[lint]
+
+extend-select = [
+    "B",
+    "D",
+    "E",
+    "F",
+    "Q",
+    "RUF",
+    "UP",
+    "W"
+]
+
+extend-ignore = [
+    "D100"
+]
+
+fixable = [ "ALL" ]
+unfixable = []
+
+
+[lint.per-file-ignores]
+"tests/*" = [ "D" ]
+
+
+[lint.pydocstyle]
+convention = "google"

@@ -1,0 +1,9 @@
+hyprland:
+  wow:
+    super:
+      awesome: true
+      features:
+          - name: "Feature 1"
+            enabled: true
+          - name: "Feature 2"
+            enabled: false

@@ -1,0 +1,36 @@
+[project]
+name = "hypryaml"
+version = "0.1.1"
+description = "Dynamically set Hypr values using YAML !"
+
+authors = [
+    { name = "Clément METZ", email = "metz.clement@gmail.com" }
+]
+readme = "README.md"
+licence = "MIT"
+licence-files = [ "LICENSE" ]
+
+requires-python = ">=3.13"
+dependencies = [
+    "pyyaml>=6.0.2",
+    "typer-slim>=0.16.0",
+]
+
+[project.urls]
+Repository = "https://github.com/mccreemainwoody/hyprthemes.git"
+
+[project.scripts]
+hypryaml-py = "hypryaml.main:app"
+
+[dependency-groups]
+dev = [
+    "icecream>=2.1.5",
+]
+test = [
+    "pytest>=8.4.1",
+    "ruff>=0.12.3",
+]
+
+[build-system]
+requires = ["uv_build>=0.7.21,<0.8.0"]
+build-backend = "uv_build"
