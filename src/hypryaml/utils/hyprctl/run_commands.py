@@ -1,13 +1,14 @@
 import json
 import subprocess
 
-from hyprthemes.models import CommandResult
-
 from collections.abc import Collection
 
+from hypryaml.models import CommandResult
 
-def run_hyprctl_command(args: Collection[str,], use_json: bool = False) \
-        -> CommandResult:
+
+def run_hyprctl_command(
+    args: Collection[str,], use_json: bool = False
+) -> CommandResult:
     """Run a hyprctl command and return its output.
 
     Return code will be -1 if hyprctl does not recognize the request (the
@@ -29,10 +30,7 @@ def run_hyprctl_command(args: Collection[str,], use_json: bool = False) \
         total_command.insert(0, "-j")
 
     result = subprocess.run(
-        total_command,
-        capture_output=True,
-        text=True,
-        check=False
+        total_command, capture_output=True, text=True, check=False
     )
 
     stdout = result.stdout.strip()

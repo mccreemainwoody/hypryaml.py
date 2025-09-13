@@ -2,6 +2,4 @@
 
 from .CommandResult import CommandResult
 
-__all__ = [
-    "CommandResult"
-]
+__all__ = ["CommandResult"]

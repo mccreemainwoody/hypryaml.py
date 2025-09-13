@@ -1,8 +1,8 @@
-from hyprthemes.utils.hyprctl import run_hyprctl_command
-
 from collections.abc import Collection
-from hyprthemes.models import CommandResult
 from os import PathLike
+
+from hypryaml.models import CommandResult
+from hypryaml.utils.hyprctl import run_hyprctl_command
 
 
 def run_hyprpaper_command(args: Collection[str,]) -> CommandResult:

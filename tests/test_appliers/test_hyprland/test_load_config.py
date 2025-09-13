@@ -1,8 +1,7 @@
 import pytest
 import yaml
 
-from hyprthemes.appliers.hyprland import generate_keywords
-
+from hypryaml.appliers.hyprland import generate_keywords
 from pathlib import Path
 from typing import Any
 
