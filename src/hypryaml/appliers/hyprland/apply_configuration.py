@@ -1,4 +1,4 @@
-from hyprthemes.utils.hyprctl import run_hyprctl_keyword
+from hypryaml.utils.hyprctl import run_hyprctl_keyword
 from .load_config import generate_keywords
 
 from typing import Any

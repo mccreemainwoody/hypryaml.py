@@ -4,6 +4,7 @@ from dataclasses import dataclass
 @dataclass(frozen=True)
 class CommandResult:
     """Represents the result of a command execution."""
+
     exit_code: int
     """The exit code of the command."""
     stdout: str

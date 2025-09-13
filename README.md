@@ -1,4 +1,4 @@
-# hyprthemes
+# hypryaml.py
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -7,6 +7,10 @@
 
 A CLI utility tool to load Hyprland themes using YAML configurations.
 
+**New !!** A [new version](https://github.com/mccreemainwoody/hypryaml) of the
+CLI has been rewritten in Rust. This package will still be maintained to catch
+up with the new version's updates, but be sure to check it out too !
+
 This project is still very young and under development, so expect bugs and
 issues. It is for now mostly a personal tool ; but if the project picks your
 interest and gives you ideas for improvements, feel free to open an issue or a
@@ -14,20 +18,20 @@ pull request!
 
 ## Installation
 
-For now, the project can be installed using `uv`: 
+For now, the project can be installed using `uv`:
 
-```bash
+```{bash}
 uv build
-pip install dist/hyprthemes-X.Y.Z-py3-none-any.whl  # Replace X.Y.Z with the version number
+pip install dist/hypryaml-X.Y.Z-py3-none-any.whl  # Replace X.Y.Z with the version number
 ```
 
 ## Usage
 
-To use `hyprthemes`, you just need to give your configuration file as an
+To use `hypryaml.py`, you just need to give your configuration file as an
 argument. That's all there is to it !
 
-```bash
-hyprthemes /path/to/your/config.yaml
+```{bash}
+hypryaml-py /path/to/your/config.yaml
 ```
 
 ## Create a theme
@@ -51,7 +55,7 @@ To reach a keyword within a section, go down within the hierarchy using YAML
 sections.
 
 For example, this configuration could be loaded to change the current border
-and blur properties of Hyprland:
+properties of Hyprland:
 
 ```yaml
 hyprland:
@@ -59,7 +63,4 @@ hyprland:
     border_size: 1
     col.inactive_border: rgb(ff0000) rgb(ffff00) 45rad
     col.active_border: rgb(33ccff) rgb(00ff99) 45rad
-  blur:
-    enabled: true
-    noise: 0.15
 ```

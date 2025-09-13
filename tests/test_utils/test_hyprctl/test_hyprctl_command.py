@@ -1,7 +1,7 @@
 import pytest
 
-from hyprthemes.models import CommandResult
-from hyprthemes.utils.hyprctl import run_hyprctl_command
+from hypryaml.models import CommandResult
+from hypryaml.utils.hyprctl import run_hyprctl_command
 
 
 def assert_hyprctl_command(args: list[str,]) -> CommandResult:

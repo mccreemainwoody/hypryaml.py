@@ -1,14 +1,14 @@
 [project]
-name = "hyprthemes"
-version = "0.1.0"
-description = "A CLI utility tool to load Hyprland themes from YAML configurations"
+name = "hypryaml"
+version = "0.1.1"
+description = "Dynamically set Hypr values using YAML !"
 
 authors = [
     { name = "Clément METZ", email = "metz.clement@gmail.com" }
 ]
 readme = "README.md"
 licence = "MIT"
-licence-files = [ "LICENCE" ]
+licence-files = [ "LICENSE" ]
 
 requires-python = ">=3.13"
 dependencies = [
@@ -20,7 +20,7 @@ dependencies = [
 Repository = "https://github.com/mccreemainwoody/hyprthemes.git"
 
 [project.scripts]
-hyprthemes = "hyprthemes.main:app"
+hypryaml-py = "hypryaml.main:app"
 
 [dependency-groups]
 dev = [

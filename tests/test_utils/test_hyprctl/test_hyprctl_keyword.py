@@ -1,4 +1,4 @@
-from hyprthemes.utils.hyprctl import run_hyprctl_keyword
+from hypryaml.utils.hyprctl import run_hyprctl_keyword
 
 
 border_keyword = "general:col.active_border"
